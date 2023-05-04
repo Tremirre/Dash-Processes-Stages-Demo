@@ -4,7 +4,7 @@ from dash import html, dcc
 upload_stage = html.Div(
     [
         html.H2("Upload"),
-        html.P("Upload your data here"),
+        html.P("Upload your data here (will show error if .pptx file is submitted)"),
         dcc.Upload(
             id="upload_data",
             children=html.Div(["Drag and Drop or ", html.A("Select Files")]),
@@ -37,7 +37,7 @@ finish_stage = html.Div(
         html.H2("Finish"),
         html.P("Finish your data here"),
         html.Div(id="finish_data"),
-        html.Button(id="error-thrower", children="Throw error")
+        html.Button(id="error-thrower", children="Throw error"),
     ]
 )
 
